@@ -79,7 +79,7 @@ public class QuestionSendActivity extends AppCompatActivity implements View.OnCl
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CHOOSER_REQUEST_CODE) {
 
-            if (requestCode != RESULT_OK) {
+            if (resultCode != RESULT_OK) {
                 if (mPictureUri != null) {
                     getContentResolver().delete(mPictureUri, null, null);
                     mPictureUri = null;
